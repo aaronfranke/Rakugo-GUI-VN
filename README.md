@@ -1,4 +1,4 @@
-# Rakugo-GUI-VN ![Logo](graphics/window_icon.png)
+# Rakugo-GUI-VN
 
 
 This is just subrepo for Rakugo Visual Novel GUI.
