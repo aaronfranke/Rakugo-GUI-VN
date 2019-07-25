@@ -51,7 +51,7 @@ func _ready():
 	help_button.connect("pressed", self, "_on_Help_pressed")
 	quit_button.connect("pressed", self, "_on_Quit_pressed")
 
-	var auto_save_path = str("user://" + Rakugo.save_folder + "/auto.save")
+	var auto_save_path = str("usr://" + Rakugo.save_folder + "/auto.save")
 
 	if not Rakugo.file.file_exists(auto_save_path):
 		continue_button.hide()
@@ -224,7 +224,7 @@ func _screenshot_on_input(event):
 		return
 
 	var dir = Directory.new()
-	var screenshots_dir = "user://screenshots"
+	var screenshots_dir = "usr://screenshots"
 
 	if !dir.dir_exists(screenshots_dir):
 		dir.make_dir(screenshots_dir)

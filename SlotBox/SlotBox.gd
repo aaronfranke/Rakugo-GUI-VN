@@ -2,7 +2,7 @@ extends Control
 
 export var slot: PackedScene
 
-onready var saveslots_dir: String = "res://" + Rakugo.save_folder
+var saveslots_dir: String
 onready var container := $ScrollGrid/GridContainer
 onready var popup := $PopupPanel
 
@@ -15,6 +15,7 @@ var save_name := "new_save"
 signal popup_is_closed
 
 func _ready() -> void:
+	update_save_dir()
 	connect("visibility_changed", self, "_on_visibility_changed")
 
 	var con = popup.get_node("ConfirmOverwrite/HBoxContainer")
@@ -54,6 +55,7 @@ func delete_save(caller: String, mod: String):
 	if not overwrite:
 		return
 
+	update_save_dir()
 	var dir = Directory.new()
 	var saveslotsdir = saveslots_dir + "/"
 
@@ -129,9 +131,16 @@ func close_popup(answer):
 	container.show()
 	overwrite = answer
 	emit_signal("popup_is_closed")
-
+	
+func update_save_dir():
+	saveslots_dir = "user://" +  Rakugo.save_folder
+	
+	if Rakugo.test_save:
+		saveslots_dir = "res://" + Rakugo.save_folder
+	
 
 func savebox(saveslotsdir := saveslots_dir + "/") -> void:
+	
 	var saves = get_dir_contents(saveslots_dir, "tres",
 		["history", "auto", "quick", "back"])
 
@@ -180,6 +189,7 @@ func savebox(saveslotsdir := saveslots_dir + "/") -> void:
 
 
 func loadbox(saveslotsdir := saveslots_dir + "/") -> bool:
+	
 	var saves = get_dir_contents(saveslots_dir, "tres", ["history"])
 
 	for c in container.get_children():
