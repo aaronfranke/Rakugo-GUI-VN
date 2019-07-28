@@ -51,7 +51,10 @@ func _ready():
 	help_button.connect("pressed", self, "_on_Help_pressed")
 	quit_button.connect("pressed", self, "_on_Quit_pressed")
 
-	var auto_save_path = str("user://" + Rakugo.save_folder + "/auto.save")
+	var auto_save_path = str("user://" + Rakugo.save_folder + "/auto.res")
+
+	if Rakugo.test_save:
+		auto_save_path = str("res://" + Rakugo.save_folder + "/auto.tres")
 
 	if not Rakugo.file.file_exists(auto_save_path):
 		continue_button.hide()
