@@ -145,12 +145,12 @@ func save_conf() -> void:
 	conf_set_rakugo_value(config, "Skip_After_Choices", "skip_after_choices")
 	
 	# Save the changes by overwriting the previous file
-	config.save("usr://settings.cfg")
+	config.save("user://settings.cfg")
 
 
 func load_conf() -> void:
 	var config = ConfigFile.new()
-	var err = config.load("usr://settings.cfg")
+	var err = config.load("user://settings.cfg")
 	
 	if err != OK: # if not, something went wrong with the file loading
 		return
