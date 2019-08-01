@@ -4580,6 +4580,7 @@ register = false
 node_id = "Screens"
 
 [node name="Panel" type="Panel" parent="."]
+editor/display_folded = true
 margin_right = 1023.0
 margin_bottom = 600.0
 
@@ -4643,6 +4644,7 @@ rakugo_text = "{right}Rakugo [rakugo_version]"
 vars_names = [ "rakugo_version" ]
 
 [node name="Navigation" type="Panel" parent="."]
+editor/display_folded = true
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -4.0
