@@ -9,21 +9,17 @@
 [ext_resource path="res://gui/Labels/TitleText.tscn" type="PackedScene" id=7]
 [ext_resource path="res://gui/InGame/QuickMenuButton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://gui/SlotBox/SlotBox.tscn" type="PackedScene" id=9]
-[ext_resource path="res://ubuntu-font-family/Ubuntu-B.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://ubuntu-font-family/UB40outline.tres" type="DynamicFont" id=10]
 [ext_resource path="res://gui/History/History.gd" type="Script" id=11]
 [ext_resource path="res://gui/History/HistoryItem.tscn" type="PackedScene" id=12]
 [ext_resource path="res://gui/OptionsBox/OptionsBox.tscn" type="PackedScene" id=13]
 [ext_resource path="res://gui/Quests/QuestsBox.tscn" type="PackedScene" id=14]
-[ext_resource path="res://gui/Screens/QuitBox.tscn" type="PackedScene" id=15]
+[ext_resource path="res://gui/Labels/dialogue_text.tscn" type="PackedScene" id=15]
+[ext_resource path="res://gui/Screens/QuitBox.tscn" type="PackedScene" id=16]
 
-[sub_resource type="ButtonGroup" id=10]
+[sub_resource type="ButtonGroup" id=9]
 
-[sub_resource type="DynamicFont" id=3]
-size = 40
-use_filter = true
-font_data = ExtResource( 10 )
-
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "modern_center"
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Navigation:rect_position:x")
@@ -634,7 +630,7 @@ tracks/57/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "modern_left"
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Navigation:rect_position:x")
@@ -1355,7 +1351,7 @@ tracks/68/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "modern_right"
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Navigation:rect_position:x")
@@ -2046,7 +2042,7 @@ tracks/65/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=6]
 resource_name = "small_center"
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Navigation:rect_position:x")
@@ -2717,7 +2713,7 @@ tracks/63/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=7]
 resource_name = "small_left"
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Navigation:rect_position:x")
@@ -3528,7 +3524,7 @@ tracks/77/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=8]
 resource_name = "small_right"
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Navigation:rect_position:x")
@@ -4308,6 +4304,7 @@ register = false
 node_id = "Screens"
 
 [node name="Panel" type="Panel" parent="."]
+editor/display_folded = true
 margin_right = 1023.0
 margin_bottom = 600.0
 
@@ -4321,10 +4318,19 @@ expand = true
 stretch_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 726.892
-margin_top = 494.237
-margin_right = 991.892
-margin_bottom = 576.237
+editor/display_folded = true
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 759.362
+margin_top = 513.844
+margin_right = 1024.36
+margin_bottom = 595.844
+grow_horizontal = 0
+grow_vertical = 0
+rect_pivot_offset = Vector2( 1.16077, 0.622498 )
+alignment = 2
 
 [node name="TitleNVersion" type="HBoxContainer" parent="VBoxContainer"]
 margin_right = 265.0
@@ -4377,6 +4383,7 @@ rakugo_text = "{right}Rakugo [rakugo_version]"
 vars_names = [ "rakugo_version" ]
 
 [node name="Navigation" type="Panel" parent="."]
+editor/display_folded = true
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -4.0
@@ -4434,7 +4441,7 @@ margin_top = 72.0
 margin_right = 140.0
 margin_bottom = 104.0
 toggle_mode = true
-group = SubResource( 10 )
+group = SubResource( 9 )
 text = "History"
 align = 0
 
@@ -4444,7 +4451,8 @@ margin_top = 72.0
 margin_right = 140.0
 margin_bottom = 104.0
 toggle_mode = true
-group = SubResource( 10 )
+pressed = true
+group = SubResource( 9 )
 text = "Quests"
 align = 0
 
@@ -4460,7 +4468,7 @@ margin_top = 136.0
 margin_right = 198.0
 margin_bottom = 174.0
 toggle_mode = true
-group = SubResource( 10 )
+group = SubResource( 9 )
 text = "Load"
 align = 0
 
@@ -4470,7 +4478,7 @@ margin_top = 280.0
 margin_right = 140.0
 margin_bottom = 312.0
 toggle_mode = true
-group = SubResource( 10 )
+group = SubResource( 9 )
 text = "Save"
 align = 0
 
@@ -4479,7 +4487,7 @@ margin_top = 194.0
 margin_right = 198.0
 margin_bottom = 232.0
 toggle_mode = true
-group = SubResource( 10 )
+group = SubResource( 9 )
 text = "Options"
 align = 0
 
@@ -4488,7 +4496,7 @@ margin_top = 252.0
 margin_right = 198.0
 margin_bottom = 290.0
 toggle_mode = true
-group = SubResource( 10 )
+group = SubResource( 9 )
 text = "About"
 align = 0
 
@@ -4497,7 +4505,7 @@ margin_top = 310.0
 margin_right = 198.0
 margin_bottom = 348.0
 toggle_mode = true
-group = SubResource( 10 )
+group = SubResource( 9 )
 text = "Help"
 align = 0
 
@@ -4506,7 +4514,7 @@ margin_top = 368.0
 margin_right = 198.0
 margin_bottom = 406.0
 toggle_mode = true
-group = SubResource( 10 )
+group = SubResource( 9 )
 text = "Quit"
 align = 0
 
@@ -4525,24 +4533,24 @@ allow_lesser = true
 
 [node name="SlotBox" parent="." instance=ExtResource( 9 )]
 visible = false
-margin_left = 269.303
-margin_top = 33.5055
-margin_right = 971.303
-margin_bottom = 565.505
+margin_left = 259.481
+margin_top = 69.1099
+margin_right = 961.481
+margin_bottom = 601.109
 
 [node name="HistoryBox" type="VBoxContainer" parent="."]
 editor/display_folded = true
 visible = false
-margin_left = 271.354
-margin_top = 6.79639
-margin_right = 973.354
-margin_bottom = 540.796
+margin_left = 259.077
+margin_top = 69.411
+margin_right = 961.077
+margin_bottom = 603.411
 mouse_filter = 0
 
 [node name="Title" type="Label" parent="HistoryBox"]
 margin_right = 702.0
 margin_bottom = 54.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = ExtResource( 10 )
 text = "History"
 align = 1
 
@@ -4550,14 +4558,14 @@ align = 1
 editor/display_folded = true
 margin_top = 58.0
 margin_right = 702.0
-margin_bottom = 534.0
+margin_bottom = 533.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 scroll_horizontal_enabled = false
 
 [node name="History" type="VBoxContainer" parent="HistoryBox/ScrollContainer"]
 margin_right = 702.0
-margin_bottom = 476.0
+margin_bottom = 475.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 5
@@ -4566,49 +4574,48 @@ HistoryItemTemplate = ExtResource( 12 )
 
 [node name="OptionsBox" parent="." instance=ExtResource( 13 )]
 visible = false
-margin_left = 213.354
-margin_top = 33.1516
-margin_right = 1027.35
-margin_bottom = 551.152
+margin_left = 209.143
+margin_top = 75.2569
+margin_right = 1023.14
+margin_bottom = 593.257
 
 [node name="QuestsBox" parent="." instance=ExtResource( 14 )]
 visible = false
-margin_left = 215.354
-margin_top = -2.20361
-margin_right = 1039.35
-margin_bottom = 602.796
+margin_left = 206.0
+margin_top = 64.0
+margin_right = 1023.0
+margin_bottom = 601.0
 
 [node name="AboutBox" type="VBoxContainer" parent="."]
 editor/display_folded = true
 visible = false
-margin_left = 271.354
-margin_top = 6.79639
-margin_right = 973.354
-margin_bottom = 540.796
+margin_left = 260.304
+margin_top = 62.0446
+margin_right = 962.304
+margin_bottom = 596.044
 
 [node name="Title" type="Label" parent="AboutBox"]
 margin_right = 702.0
 margin_bottom = 54.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = ExtResource( 10 )
 text = "About"
 align = 1
 
-[node name="RakugoTextLabel" type="RichTextLabel" parent="AboutBox"]
+[node name="RakugoTextLabel" parent="AboutBox" instance=ExtResource( 15 )]
 margin_top = 58.0
 margin_right = 702.0
 margin_bottom = 533.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-bbcode_enabled = true
 script = ExtResource( 6 )
 rakugo_text_file = "res://about.txt"
 
-[node name="QuitBox" parent="." instance=ExtResource( 15 )]
+[node name="QuitBox" parent="." instance=ExtResource( 16 )]
 visible = false
-margin_left = 271.354
-margin_top = 6.79639
-margin_right = 973.354
-margin_bottom = 540.796
+margin_left = 266.091
+margin_top = 64.6911
+margin_right = 968.091
+margin_bottom = 598.691
 
 [node name="BackButton" parent="." instance=ExtResource( 8 )]
 visible = false
@@ -4618,12 +4625,12 @@ margin_right = 629.883
 margin_bottom = 594.472
 
 [node name="Layouts" type="AnimationPlayer" parent="."]
-anims/modern_center = SubResource( 4 )
-anims/modern_left = SubResource( 5 )
-anims/modern_right = SubResource( 6 )
-anims/small_center = SubResource( 7 )
-anims/small_left = SubResource( 8 )
-anims/small_right = SubResource( 9 )
+anims/modern_center = SubResource( 3 )
+anims/modern_left = SubResource( 4 )
+anims/modern_right = SubResource( 5 )
+anims/small_center = SubResource( 6 )
+anims/small_left = SubResource( 7 )
+anims/small_right = SubResource( 8 )
 
 [node name="UnpauseTimer" type="Timer" parent="."]
 one_shot = true
