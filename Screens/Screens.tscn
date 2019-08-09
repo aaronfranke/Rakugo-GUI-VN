@@ -17,9 +17,9 @@
 [ext_resource path="res://gui/Labels/dialogue_text.tscn" type="PackedScene" id=15]
 [ext_resource path="res://gui/Screens/QuitBox.tscn" type="PackedScene" id=16]
 
-[sub_resource type="ButtonGroup" id=9]
+[sub_resource type="ButtonGroup" id=1]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "modern_center"
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Navigation:rect_position:x")
@@ -630,7 +630,7 @@ tracks/57/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "modern_left"
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Navigation:rect_position:x")
@@ -1351,7 +1351,7 @@ tracks/68/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "modern_right"
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Navigation:rect_position:x")
@@ -2042,7 +2042,7 @@ tracks/65/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "small_center"
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Navigation:rect_position:x")
@@ -2713,7 +2713,7 @@ tracks/63/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=6]
 resource_name = "small_left"
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Navigation:rect_position:x")
@@ -3524,7 +3524,7 @@ tracks/77/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=7]
 resource_name = "small_right"
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Navigation:rect_position:x")
@@ -4441,7 +4441,7 @@ margin_top = 72.0
 margin_right = 140.0
 margin_bottom = 104.0
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 1 )
 text = "History"
 align = 0
 
@@ -4452,7 +4452,7 @@ margin_right = 140.0
 margin_bottom = 104.0
 toggle_mode = true
 pressed = true
-group = SubResource( 9 )
+group = SubResource( 1 )
 text = "Quests"
 align = 0
 
@@ -4468,7 +4468,7 @@ margin_top = 136.0
 margin_right = 198.0
 margin_bottom = 174.0
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 1 )
 text = "Load"
 align = 0
 
@@ -4478,7 +4478,7 @@ margin_top = 280.0
 margin_right = 140.0
 margin_bottom = 312.0
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 1 )
 text = "Save"
 align = 0
 
@@ -4487,7 +4487,7 @@ margin_top = 194.0
 margin_right = 198.0
 margin_bottom = 232.0
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 1 )
 text = "Options"
 align = 0
 
@@ -4496,7 +4496,7 @@ margin_top = 252.0
 margin_right = 198.0
 margin_bottom = 290.0
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 1 )
 text = "About"
 align = 0
 
@@ -4505,7 +4505,7 @@ margin_top = 310.0
 margin_right = 198.0
 margin_bottom = 348.0
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 1 )
 text = "Help"
 align = 0
 
@@ -4514,7 +4514,7 @@ margin_top = 368.0
 margin_right = 198.0
 margin_bottom = 406.0
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 1 )
 text = "Quit"
 align = 0
 
@@ -4625,12 +4625,12 @@ margin_right = 629.883
 margin_bottom = 594.472
 
 [node name="Layouts" type="AnimationPlayer" parent="."]
-anims/modern_center = SubResource( 3 )
-anims/modern_left = SubResource( 4 )
-anims/modern_right = SubResource( 5 )
-anims/small_center = SubResource( 6 )
-anims/small_left = SubResource( 7 )
-anims/small_right = SubResource( 8 )
+anims/modern_center = SubResource( 2 )
+anims/modern_left = SubResource( 3 )
+anims/modern_right = SubResource( 4 )
+anims/small_center = SubResource( 5 )
+anims/small_left = SubResource( 6 )
+anims/small_right = SubResource( 7 )
 
 [node name="UnpauseTimer" type="Timer" parent="."]
 one_shot = true
