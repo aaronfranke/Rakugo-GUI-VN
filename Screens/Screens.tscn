@@ -9,6 +9,7 @@
 [ext_resource path="res://gui/Labels/TitleText.tscn" type="PackedScene" id=7]
 [ext_resource path="res://gui/InGame/QuickMenuButton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://gui/SlotBox/SlotBox.tscn" type="PackedScene" id=9]
+[ext_resource path="res://ubuntu-font-family/UB40outline.tres" type="DynamicFont" id=10]
 [ext_resource path="res://gui/History/History.gd" type="Script" id=11]
 [ext_resource path="res://gui/History/HistoryItem.tscn" type="PackedScene" id=12]
 [ext_resource path="res://gui/OptionsBox/OptionsBox.tscn" type="PackedScene" id=13]
@@ -4467,7 +4468,7 @@ margin_top = 136.0
 margin_right = 198.0
 margin_bottom = 174.0
 toggle_mode = true
-group = SubResource( 10 )
+group = SubResource( 9 )
 text = "Load"
 align = 0
 
