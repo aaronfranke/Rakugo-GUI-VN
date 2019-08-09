@@ -1,15 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://gui/SlotBox/SlotBox.gd" type="Script" id=1]
 [ext_resource path="res://gui/SlotBox/Slot.tscn" type="PackedScene" id=2]
-[ext_resource path="res://ubuntu-font-family/Ubuntu-B.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://ubuntu-font-family/UB40outline.tres" type="DynamicFont" id=3]
 [ext_resource path="res://gui/SlotBox/ConfirmOverwrite.tscn" type="PackedScene" id=4]
 [ext_resource path="res://gui/SlotBox/ConfirmName.tscn" type="PackedScene" id=5]
 [ext_resource path="res://gui/SlotBox/ConfirmDelete.tscn" type="PackedScene" id=6]
-
-[sub_resource type="DynamicFont" id=1]
-size = 40
-font_data = ExtResource( 3 )
 
 [node name="SlotBox" type="Control"]
 margin_left = 257.0
@@ -22,7 +18,7 @@ slot = ExtResource( 2 )
 [node name="Title" type="Label" parent="."]
 margin_right = 702.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 3 )
 text = "Save/Load"
 align = 1
 

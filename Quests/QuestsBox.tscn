@@ -1,17 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://gui/Quests/QuestsBox.gd" type="Script" id=1]
 [ext_resource path="res://gui/Quests/QuestButton.tscn" type="PackedScene" id=2]
-[ext_resource path="res://ubuntu-font-family/Ubuntu-B.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://ubuntu-font-family/UB40outline.tres" type="DynamicFont" id=3]
 [ext_resource path="res://addons/Rakugo/nodes/rakugo_label.gd" type="Script" id=4]
-
-
-
-
-[sub_resource type="DynamicFont" id=1]
-
-size = 40
-font_data = ExtResource( 3 )
 
 [node name="QuestsBox" type="VBoxContainer"]
 margin_left = 257.0
@@ -27,7 +19,7 @@ margin_right = 702.0
 margin_bottom = 46.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 3 )
 text = "Quests"
 align = 1
 
@@ -68,7 +60,7 @@ margin_right = 349.0
 margin_bottom = 46.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 3 )
 text = "Choose Quests"
 align = 1
 
@@ -98,4 +90,3 @@ margin_right = 349.0
 margin_bottom = 203.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
