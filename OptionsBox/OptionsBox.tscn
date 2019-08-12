@@ -149,7 +149,6 @@ var_name = "typing_text"
 default = true
 
 [node name="TextSpeedBox" type="VBoxContainer" parent="HBoxContainer/GameplayBox"]
-editor/display_folded = true
 margin_top = 136.0
 margin_right = 254.0
 margin_bottom = 186.0
@@ -177,6 +176,7 @@ margin_right = 254.0
 margin_bottom = 50.0
 grow_horizontal = 0
 size_flags_vertical = 1
+min_value = 1.0
 value = 30.0
 ticks_on_borders = true
 
