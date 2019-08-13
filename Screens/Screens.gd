@@ -50,6 +50,7 @@ func _ready():
 	about_button.connect("pressed", self, "_on_About_pressed")
 	help_button.connect("pressed", self, "_on_Help_pressed")
 	quit_button.connect("pressed", self, "_on_Quit_pressed")
+	Rakugo.connect("game_ended", self, "_on_game_end")
 
 	var auto_save_path = str("user://" + Rakugo.save_folder + "/auto.res")
 
@@ -143,6 +144,16 @@ func in_game():
 	quests_button.show()
 	scrollbar.show()
 
+
+func _on_game_end():
+	new_game_button.show()
+	continue_button.show()
+	return_button.hide()
+	save_button.hide()
+	history_button.hide()
+	quests_button.hide()
+	scrollbar.hide()
+	show()
 
 func _on_NewGame_pressed():
 	hide()
