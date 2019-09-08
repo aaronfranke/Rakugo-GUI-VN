@@ -71,7 +71,6 @@ avatar_container_path = NodePath("ViewportContainer")
 line_edit_path = NodePath("../NVL/VBox/RakugoLineEdit")
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
-editor/display_folded = true
 margin_right = 100.0
 margin_bottom = 100.0
 
@@ -85,7 +84,6 @@ usage = 0
 render_target_update_mode = 3
 
 [node name="VBox" type="VBoxContainer" parent="."]
-editor/display_folded = true
 margin_left = 104.0
 margin_right = 1024.0
 margin_bottom = 100.0

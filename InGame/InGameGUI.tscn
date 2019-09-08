@@ -423,7 +423,6 @@ register = false
 node_id = "InGameGUI"
 
 [node name="ScrollContainerVMenu" type="ScrollContainer" parent="."]
-editor/display_folded = true
 visible = false
 anchor_left = 0.5
 anchor_top = 1.0
@@ -451,7 +450,6 @@ __meta__ = {
 ChoiceButton = ExtResource( 5 )
 
 [node name="ScrollContainerHMenu" type="ScrollContainer" parent="."]
-editor/display_folded = true
 visible = false
 anchor_left = 0.5
 anchor_top = 1.0
@@ -483,7 +481,6 @@ ChoiceButton = ExtResource( 5 )
 mouse_filter = 0
 
 [node name="Notify" type="Panel" parent="."]
-editor/display_folded = true
 visible = false
 anchor_right = 1.0
 margin_left = -2.0
@@ -511,7 +508,6 @@ scroll_active = false
 selection_enabled = true
 
 [node name="Quick" type="HBoxContainer" parent="."]
-editor/display_folded = true
 margin_top = 571.0
 margin_right = 1463.0
 margin_bottom = 611.0
@@ -628,7 +624,6 @@ custom_fonts/font = SubResource( 1 )
 text = "Quit"
 
 [node name="InfoAnim" type="AnimationPlayer" parent="Quick"]
-editor/display_folded = true
 anims/Auto = SubResource( 2 )
 anims/Checkpoint = SubResource( 3 )
 anims/GeneralNotif = SubResource( 4 )

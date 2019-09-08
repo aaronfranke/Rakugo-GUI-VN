@@ -4303,7 +4303,6 @@ register = false
 node_id = "Screens"
 
 [node name="Panel" type="Panel" parent="."]
-editor/display_folded = true
 margin_right = 1023.0
 margin_bottom = 600.0
 
@@ -4316,7 +4315,6 @@ expand = true
 stretch_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-editor/display_folded = true
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -4381,7 +4379,6 @@ rakugo_text = "{right}Rakugo [rakugo_version]"
 vars_names = [ "rakugo_version" ]
 
 [node name="Navigation" type="Panel" parent="."]
-editor/display_folded = true
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -4.0
@@ -4396,7 +4393,6 @@ margin_bottom = 65.0
 text = "Your new game"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Navigation"]
-editor/display_folded = true
 margin_left = 13.0
 margin_top = 109.0
 margin_right = 211.0
@@ -4537,7 +4533,6 @@ margin_right = 961.481
 margin_bottom = 601.109
 
 [node name="HistoryBox" type="VBoxContainer" parent="."]
-editor/display_folded = true
 visible = false
 margin_left = 259.077
 margin_top = 69.411
@@ -4553,7 +4548,6 @@ text = "History"
 align = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HistoryBox"]
-editor/display_folded = true
 margin_top = 58.0
 margin_right = 702.0
 margin_bottom = 533.0
@@ -4585,7 +4579,6 @@ margin_right = 1023.0
 margin_bottom = 601.0
 
 [node name="AboutBox" type="VBoxContainer" parent="."]
-editor/display_folded = true
 visible = false
 margin_left = 260.304
 margin_top = 62.0446

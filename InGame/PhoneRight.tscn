@@ -83,7 +83,6 @@ rect_min_size = Vector2( 920, 0 )
 color = Color( 0.529412, 0.92549, 0.709804, 1 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-editor/display_folded = true
 margin_left = 90.1899
 margin_top = 8.35092
 margin_right = 1011.19
@@ -135,7 +134,6 @@ caret_blink = true
 script = ExtResource( 8 )
 
 [node name="ViewportContainer" type="ViewportContainer" parent="HBoxContainer"]
-editor/display_folded = true
 margin_left = 821.0
 margin_right = 921.0
 margin_bottom = 124.0

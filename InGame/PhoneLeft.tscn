@@ -79,7 +79,6 @@ margin_bottom = 144.721
 color = Color( 0.729412, 0.788235, 0.964706, 1 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-editor/display_folded = true
 margin_left = 18.1766
 margin_top = 22.7207
 margin_right = 944.177
@@ -88,7 +87,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ViewportContainer" type="ViewportContainer" parent="HBoxContainer"]
-editor/display_folded = true
 margin_right = 100.0
 margin_bottom = 124.0
 
